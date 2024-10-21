@@ -28,14 +28,14 @@ class UserController {
             echo "Error al guardar el usuario.";
         }
     }
-    public static function getAllUsers(){
+    public function getAllUsers(){
         global $connection;
         $usersList=User::list($connection);
         require_once BASE_PATH . '/views/showUsers.php';
     }
-    public static function deleteUser(){
+    public function deleteUser(){
         global $connection;
         $deleteUsers=User::delete($connection);
-        require_once BASE_PATH . '/views/showUsers.php';
+        require_once BASE_PATH . '/views/deleteSuccess.php';
     }
 }

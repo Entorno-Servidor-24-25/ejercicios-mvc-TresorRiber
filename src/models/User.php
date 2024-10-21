@@ -22,8 +22,9 @@ class User {
         $sql = "SELECT * FROM Usuario";
         return $connection->query($sql);
     }
-    public static function delete($connection, $name){
-        $sql = "DELETE * FROM Usuario WHERE name = '$name'";
+    public static function delete($connection){
+        $id = $_POST['id'];
+        $sql = "DELETE FROM Usuario WHERE id = '$id'";
         return $connection->query($sql);
         }
 }

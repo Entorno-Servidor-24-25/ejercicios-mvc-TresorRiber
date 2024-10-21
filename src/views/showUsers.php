@@ -7,16 +7,17 @@
 </head>
 <body>
     <h1>USERS</h1>
-    <form action="listUsers.php" method="POST">
-        <?php if(!empty($usersList)):?>
-        <?php foreach ($usersList as $user):?>
-            <?php echo $user['id']; ?>
-            <?php echo $user['name']; ?>
-        <?php endforeach; ?>
-        <?php else: ?>
-            <p>No hay usuarios disponibles.</p>
-        <?php endif; ?>
-        <a href="../index.php">Volver a la página principal</a>
-    </form>
+    <?php if(!empty($usersList)):?>
+    <?php foreach ($usersList as $user):?>
+        <form action="deleteUser.php" method="POST">
+        <input type="submit" name="borrar" value="borrar"></input>
+        <input type="hidden" value="<?php echo $user['id']?>" name="id">
+        <?php echo $user['id']; ?>
+        <?php echo $user['name'] . "<br>"; ?></form>
+    <?php endforeach; ?>
+    <?php else: ?>
+        <p>No hay usuarios disponibles.</p>
+    <?php endif; ?>
+    <a href="../index.php">Volver a la página principal</a>
 </body>
 </html>
