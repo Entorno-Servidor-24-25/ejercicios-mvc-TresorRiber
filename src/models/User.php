@@ -18,4 +18,12 @@ class User {
             return false;
         }
     }
+    public static function list($connection){
+        $sql = "SELECT * FROM Usuario";
+        return $connection->query($sql);
+    }
+    public static function delete($connection, $name){
+        $sql = "DELETE * FROM Usuario WHERE name = '$name'";
+        return $connection->query($sql);
+        }
 }

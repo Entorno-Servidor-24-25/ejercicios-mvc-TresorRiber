@@ -2,7 +2,7 @@ Arquitectura MVC
 Pregunta 1: ¿Qué camino sigue el código cuando el usuario accede por primera vez a index.php?
 Descripción: Explica qué ocurre desde que el usuario carga index.php hasta que se muestra algo en pantalla. Incluye cómo intervienen el controlador, las vistas y el modelo, si es necesario.
 
-Respuesta: Mediante la lógica de enrutamiento determina que la ruta del controlador será ./controllers/UserController y llama al metodo new UserController() que muestra el formulario llamando a la función showForm() que conecta con la vista userForm.
+Respuesta: Mediante la lógica de enrutamiento determina que la ruta del controlador será ./controllers/UserController y llama a la clase UserCOntroller (esta dentro de la carpeta controllers) muestra el formulario llamando a la función showForm() que conecta con la vista userForm.
 
 
 Pregunta 2: ¿Qué camino sigue el código cuando el usuario introduce datos en el formulario?
