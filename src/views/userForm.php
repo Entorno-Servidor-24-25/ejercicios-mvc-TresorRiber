@@ -12,5 +12,8 @@
         <input type="text" name="name" id="name" required>
         <button type="submit">Create User</button>
     </form>
+    <form action="listUsers.php" method="POST">
+        <button type="submit">Show Users</button>
+    </form>
 </body>
 </html>
